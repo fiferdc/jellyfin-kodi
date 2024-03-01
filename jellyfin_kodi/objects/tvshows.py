@@ -323,9 +323,6 @@ class TVShows(KodiDb):
             obj['AirsBeforeSeason'] = obj['AirsAfterSeason']
             obj['AirsBeforeEpisode'] = 4096  # Kodi default number for afterseason ordering
 
-        if obj['MultiEpisode']:
-            obj['Title'] = "| %02d | %s" % (obj['MultiEpisode'], obj['Title'])
-
         if not self.get_show_id(obj):
             return False
 
